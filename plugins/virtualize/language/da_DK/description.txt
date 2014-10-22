@@ -1,0 +1,1 @@
+Gør albummer virtuelle og flytter billeder fra "galleries" til "upload".

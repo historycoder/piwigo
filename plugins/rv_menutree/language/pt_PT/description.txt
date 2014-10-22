@@ -1,0 +1,1 @@
+Substitui as categorias na barra de men&uacute; com agrad&aacute;vel (javascript).

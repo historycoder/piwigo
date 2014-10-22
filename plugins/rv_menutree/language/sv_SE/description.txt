@@ -1,0 +1,1 @@
+Ersätter kategorierna i menyhanteraren med en javascriptsbaserad meny.

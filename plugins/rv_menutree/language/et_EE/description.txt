@@ -1,0 +1,2 @@
+Asendab kategooriad menüü ribal ilusatega (javascript).
+

@@ -1,0 +1,1 @@
+Substitueix el menú per defecte del primer nivell dels àlbums per un menú d'arbre.

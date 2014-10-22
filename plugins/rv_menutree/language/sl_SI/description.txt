@@ -1,0 +1,1 @@
+Nadomesti kategorije v menijski vrstici z lepšimi (javascript).

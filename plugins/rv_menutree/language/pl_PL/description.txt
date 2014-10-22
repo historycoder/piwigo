@@ -1,0 +1,1 @@
+Zamienia wygląd kategorii w menu na ładniejszy z javascript

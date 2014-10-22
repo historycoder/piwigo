@@ -1,0 +1,14 @@
+/* The file does not exist until some information is entered 
+below. Once information is entered and saved, the file will be created. */
+
+.imageComment {
+  text-align: left;
+}
+.content .additional_info {
+  font-size: 110%;
+  text-align: left;
+}
+
+.thumbnailCategories LI {
+  width: auto;
+}

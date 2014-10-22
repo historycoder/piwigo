@@ -1,0 +1,1 @@
+Lecseréli az "Albumok" menü sorait egy szebb menüsorra (javascript).

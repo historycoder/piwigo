@@ -1,0 +1,41 @@
+2.5.b
+	- fix php warning
+
+2.5.a
+	- ability to select which derivatives to include in the sitemap
+	- piwigo 2.5
+
+2.4.b
+	- urls for picture pages
+	- extended as images sitemap
+
+2.4.a
+	- compatible piwigo 2.4
+
+2.3.b
+	- language key fix
+
+2.3.a
+	- compatible piwigo 2.3
+
+2.2.b
+	- new languages
+
+2.2.a
+	- compatible with piwigo core 2.1.0
+
+2.1.a
+	- compatible with piwigo core 2.1.0
+
+2.0.a
+	- compatible with piwigo
+
+1.7.c
+	- fix issue with .php for tags page
+
+1.7.b
+	- put the correct xml namespace
+	- added an xsl stylesheet to the xml
+	
+1.7.a 
+	- first release

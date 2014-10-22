@@ -1,0 +1,1 @@
+Bytter album i meny linjen til noen som er finere  (javascript).

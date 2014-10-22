@@ -1,0 +1,1 @@
+Il plug-in rende gli album virtuali e sposta le foto da "galleries" a "upload"
