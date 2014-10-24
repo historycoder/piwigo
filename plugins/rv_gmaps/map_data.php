@@ -43,9 +43,6 @@ header('Pragma:');*/
 header('Content-Type: text/plain; charset='.get_pwg_charset());
 header('X-Robots-Tag: noindex');
 
-if ( extension_loaded('zlib') && !ini_get('zlib.output_compression') )
-  ob_start('ob_gzhandler');
-
 $clusters = array();
 $cluster_debug = '';
 if ( !empty($page['items']) )
@@ -79,7 +76,7 @@ function jsgm_str( $str )
 $start_output = get_moment();
 
 
-echo "{\ntitle:", jsgm_str( strip_tags(trigger_event('render_element_description', $page['title']) ) )
+echo "{\ntitle:", jsgm_str( strip_tags(trigger_change('render_element_description', $page['title']) ) )
   , ",\npage_url:", jsgm_str( duplicate_index_url( array('start'=>0) ) )
   , ",\nblowup_url:", jsgm_str( rvm_duplicate_blowup_url( array('start'=>0) ) )
   , ",\nkml_url:", jsgm_str( rvm_duplicate_kml_index_url( array('start'=>0, 'flat'=>1) ) )

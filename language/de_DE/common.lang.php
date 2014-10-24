@@ -22,7 +22,7 @@
 // +-----------------------------------------------------------------------+
 /*
 Language Name: Deutsch [DE]
-Version: 2.6.0
+Version: 2.7.0
 Language URI: http://piwigo.org/ext/extension_view.php?eid=416
 Author: Piwigo team
 Author URI: http://piwigo.org
@@ -419,4 +419,10 @@ $lang['Password is missing. Please enter the password.'] = 'Das Kennwort fehlt. 
 $lang['Password confirmation is missing. Please confirm the chosen password.'] = 'Das Kennwort zum Überprüfen fehlt. Bitte geben Sie ihr gewähltes Kennwort noch einmal ein.';
 $lang['%d photos per page'] = '%d Bilder pro Seite';
 $lang['Theme'] = 'Thema';
-?>
+$lang['No results for'] = 'Keine Ergebnisse für';
+$lang['Photo description'] = 'Bildbeschreibung';
+$lang['Photo title'] = 'Bildtitel';
+$lang['Album name, A &rarr; Z'] = 'Albumname, A &rarr; Z';
+$lang['Album name, Z &rarr; A'] = 'Albumname, Z &rarr; A';
+$lang['Apply on properties'] = 'Eigenschaften übernehmen';
+$lang['Link: %s'] = 'link: %s';

@@ -93,11 +93,8 @@ var RVTree =
 			if (subLists)
 			{
 				// This LI has UL's in it, so it's a +/- node
-				if ( !XElement.hasClass(item, RVTree.options.nodeOpenClass) )
-					XElement.addClass(item, RVTree.options.nodeClosedClass);
-
 				// If it's just text, make the text work as the link also
-				if (item.firstChild.nodeName=="#text")
+				if (item.firstChild.nodeType==3)
 				{
 					t = t+item.firstChild.nodeValue;
 					item.removeChild(item.firstChild);
@@ -126,11 +123,8 @@ var RVTree =
 			item.style.listStyleType='none';
 			if (isRoot && RVTree.options.IEVersion && RVTree.options.IEVersion < 8)
 				item.style.marginLeft="-16px"; // thats IE6,IE7 ; IE8 seems more compliant
-			if (s)
-			{
-				s.appendChild(document.createTextNode(t));
-				item.insertBefore(s,item.firstChild);
-			}
+			s.appendChild(document.createTextNode(t));
+			item.insertBefore(s,item.firstChild);
 		}
 		ul.style.marginLeft = 0;
 		ul.style.paddingLeft = isRoot ? 0 : "8px";

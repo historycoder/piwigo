@@ -22,7 +22,7 @@
 // +-----------------------------------------------------------------------+
 /*
 Language Name: English [UK]
-Version: 2.6.0
+Version: 2.7.1
 Language URI: http://piwigo.org/ext/extension_view.php?eid=417
 Author: Piwigo team
 Author URI: http://piwigo.org
@@ -212,7 +212,6 @@ $lang['Invalid password!'] = "Invalid password!";
 $lang['Invalid username or email'] = 'Invalid username or email';
 $lang['IP: %s'] = "IP: %s";
 $lang['IPTC Metadata'] = 'IPTC Metadata';
-$lang['iptc_headline'] = "Image Title";
 $lang['Keyword'] = "Keyword";
 $lang['Kind of date'] = "Kind of date";
 $lang['Language'] = "Language";
@@ -419,4 +418,11 @@ $lang['Password is missing. Please enter the password.'] = "Password is missing.
 $lang['Password confirmation is missing. Please confirm the chosen password.'] = "Password confirmation is missing. Please confirm the chosen password.";
 $lang['%d photos per page'] = '%d photos per page';
 $lang['Theme'] = 'Theme';
+$lang['No results for'] = 'No results for';
+$lang['Apply on properties'] = 'Apply on properties';
+$lang['Photo title'] = 'Photo title';
+$lang['Photo description'] = 'Photo description';
+$lang['Album name, A &rarr; Z'] = 'Album name, A &rarr; Z';
+$lang['Album name, Z &rarr; A'] = 'Album name, Z &rarr; A';
+$lang['Link: %s'] = 'Link: %s';
 ?>

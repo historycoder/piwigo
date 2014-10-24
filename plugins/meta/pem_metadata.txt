@@ -1,4 +1,4 @@
 File automatically created from SVN repository.
 
 URL: http://piwigo.org/svn/extensions/meta 
-Revision: 29429
+Revision: 29793

@@ -1,6 +1,6 @@
 <?php /*
 Plugin Name: RV Menu Tree
-Version: 2.6.a
+Version: 2.7.a
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=238
 Description: Replaces the categories in the menu bar with a nicer one (javascript).
 Author: rvelices
@@ -15,15 +15,15 @@ function rv_mt_begin_page_header()
 	$template->func_combine_css( array('path'=>'plugins/rv_menutree/menutree.css') );
 }
 
-add_event_handler('get_categories_menu_sql_where', 'rv_mt_get_categories_menu_sql_where', EVENT_HANDLER_PRIORITY_NEUTRAL, 3 );
+add_event_handler('get_categories_menu_sql_where', 'rv_mt_get_categories_menu_sql_where', EVENT_HANDLER_PRIORITY_NEUTRAL, 2 );
 
-function rv_mt_get_categories_menu_sql_where($where, $expand, $filter)
+function rv_mt_get_categories_menu_sql_where($where, $expand)
 {
 	if (mobile_theme())
 		return $where;
 	add_event_handler('blockmanager_apply', 'rv_mt_menubar_categories');
 
-	if ($expand or $filter)
+	if ($expand)
 		return $where;
 
 	global $page;
@@ -46,14 +46,33 @@ function rv_mt_menubar_categories($menu_ref_arr)
 	{
 		global $template, $page;
 
+		$upper_ids = isset($page['category']['uppercats']) ? array_flip( explode(',', $page['category']['uppercats'])) : null;
+		$refLevel = 0;
+		foreach($block->data['MENU_CATEGORIES'] as &$cat)
+		{
+			$level = $cat['LEVEL'];
+			if ($level>$refLevel)
+				$pre = '<ul'.($refLevel==0?' class=rvTree id=theCategoryMenu':'').'>';
+			else
+				$pre = '</li>'.str_repeat('</ul></li>', $refLevel-$level);
+
+			$class= $cat['SELECTED'] ? 'selected ' : '';
+			if ($cat['count_categories'] > 0)
+				$class .= isset($upper_ids[$cat['id']]) ? 'liOpen':'liClosed';
+			if (!empty($class))
+				$class=' class="'.$class.'"';
+			$cat['PRE'] = $pre;
+			$cat['CLASS'] = $class;
+			$refLevel = $level;
+		}
+		unset($cat);
 		$rvmt_base_name  = basename(dirname(__FILE__));
-		$template->set_template_dir(PHPWG_ROOT_PATH.'plugins/'.$rvmt_base_name.'/template/');
 		$template->assign(array(
 			'RVMT_BASE_NAME' => $rvmt_base_name,
-			'RVMT_UPPER_IDS' => isset($page['category']['uppercats']) ? array_flip( explode(',', $page['category']['uppercats'])) : null,
+			'RVMT_POST' => str_repeat('</li></ul>', $refLevel),
 			)
 		);
-		$block->template = 'rv_menutree_categories.tpl';
+		$block->template = realpath(PHPWG_ROOT_PATH.'plugins/'.$rvmt_base_name.'/template/rv_menutree_categories.tpl');
 	}
 }
 ?>

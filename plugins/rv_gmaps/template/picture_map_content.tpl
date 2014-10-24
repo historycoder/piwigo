@@ -44,7 +44,7 @@
 {/html_style}
 
 <div id="mapPicture">
-<a href="{$U_NO_MAP}" title="{'return to normal view mode'|@translate}" rel="nofollow"><img id="thumbImg" src="{$current.THUMB_SRC}" width={$thumb_size[0]} height={$thumb_size[1]} alt="thumb"></a>
+<a href="{$U_NO_MAP}" title="{'return to normal view mode'|@translate}" rel="nofollow"><img id="thumbImg" src="{$current.derivatives.thumb->get_url()}" width={$thumb_size[0]} height={$thumb_size[1]} alt="thumb"></a>
 <br/>
 <a href="{$U_BLOWUP}" onclick="return blowupUrl(this.href);">{'More photos near this location'|@translate}</a>
 <br/>

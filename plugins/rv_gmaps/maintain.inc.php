@@ -24,9 +24,8 @@ function plugin_activate()
 {
   global $conf;
 
-  $query = 'SHOW COLUMNS FROM '. IMAGES_TABLE .' LIKE "latitude";';
-
-  if (pwg_db_num_rows(pwg_query($query)))
+	$query = 'SHOW COLUMNS FROM '. IMAGES_TABLE .' LIKE "lat";';
+	if (pwg_db_num_rows(pwg_query($query)))
 		rvgm_drop_old_columns();
 	pwg_query('DELETE FROM '.CONFIG_TABLE.' WHERE param IN("gmaps_auto_sync")');
 
@@ -66,8 +65,6 @@ function plugin_deactivate()
   {
     @unlink( PHPWG_ROOT_PATH.'map.php' );
   }
-  
-  rvm_invalidate_cache();
 }
 
 function plugin_uninstall()

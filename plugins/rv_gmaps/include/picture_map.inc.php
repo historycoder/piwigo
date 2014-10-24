@@ -23,7 +23,7 @@ add_event_handler(
   2
   );
 
-add_event_handler( 'loc_end_picture', 'rvm_end_picture'  );
+add_event_handler( 'loc_end_picture', 'rvm_end_picture' );
 
 
 function rvm_picture_map_content($content, $picture)
@@ -36,7 +36,7 @@ function rvm_picture_map_content($content, $picture)
 			'MAP_TYPE' => rvm_get_config_var('map_type', 'ROADMAP'),
       'U_NO_MAP' => duplicate_picture_url(),
       'U_BLOWUP' => rvm_make_blowup_url( array('ll'=> array('lat'=>$picture['latitude'],'lon'=>$picture['longitude'])), array('start','box') ),
-      'COMMENT_IMG' => trigger_event('render_element_description', $picture['comment'])
+      'COMMENT_IMG' => trigger_change('render_element_description', $picture['comment'])
     )
   );
   if ( isset($picture['latitude']) )

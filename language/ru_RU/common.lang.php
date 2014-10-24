@@ -22,7 +22,7 @@
 // +-----------------------------------------------------------------------+
 /*
 Language Name: Русский [RU]
-Version: 2.6.0
+Version: 2.7.1
 Language URI: http://piwigo.org/ext/extension_view.php?eid=434
 Author: Piwigo team
 Author URI: http://piwigo.org
@@ -422,4 +422,10 @@ $lang['Password is missing. Please enter the password.'] = 'Пароль не в
 $lang['Password confirmation is missing. Please confirm the chosen password.'] = 'Подтверждение пароля отсутствует. Пожалуйста, подтвердите выбранный пароль.';
 $lang['%d photos per page'] = '%d изображений на странице';
 $lang['Theme'] = 'Тема';
-?>
+$lang['No results for'] = 'Нет результатов для';
+$lang['Apply on properties'] = 'Применить к свойствам';
+$lang['Photo description'] = 'Описание изображения';
+$lang['Photo title'] = 'Заголовок изображения';
+$lang['Album name, A &rarr; Z'] = 'По названиям альбомов, от A &rarr; Z';
+$lang['Album name, Z &rarr; A'] = 'По названиям альбомов, от Z &rarr; A';
+$lang['Link: %s'] = 'Ссылка: %s';
