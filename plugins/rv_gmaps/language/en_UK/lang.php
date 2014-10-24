@@ -1,6 +1,6 @@
 <?php
 $lang['Map']='Map';
-$lang['World map']='Marker map';
+$lang['World map']='World Map';
 
 $lang['displays %s on a map']='displays %s on a map';
 $lang['opens %s in Google Earth']='opens %s in Google Earth (must be installed on your machine)';

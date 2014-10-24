@@ -2,7 +2,7 @@
 
 /*
   Plugin Name: meta
-  Version: 2.6.d
+  Version: 2.7.a
   Description: Allows to add metadata
   Plugin URI: http://piwigo.org/ext/extension_view.php?eid=220
   Author: ddtddt

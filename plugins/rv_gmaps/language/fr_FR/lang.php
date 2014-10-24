@@ -11,8 +11,8 @@ $lang['go to %s']='aller à %s';
 $lang['displays all photos on a map']='affiche toutes les images sur la carte';
 $lang['Viewing']='Aperçu';
 $lang['Link to this page']='Lien vers cette page';
-$lang['Show all']='Présente tout';
-$lang['show all photos around this location']='Présente toutes les images à proximité de ces coordonnées';
+$lang['Show all'] = 'Afficher tout';
+$lang['show all photos around this location'] = 'Afficher toutes les images à proximité de ces coordonnées';
 
 $lang['Loading']='Chargement';
 $lang['Failed']='Echec';
@@ -26,5 +26,4 @@ $lang['Geotag'] = 'Géotag';
 $lang['Geotagged'] = 'Géotagué';
 $lang['Latitude'] = 'Latitude';
 $lang['Longitude'] = 'Longitude';
-$lang['Not geotagged'] = 'Pas géotagué';
-?>
+$lang['Not geotagged'] = 'Non géotagué';

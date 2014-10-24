@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Additional Pages
-Version: 2.5.c
+Version: 2.7.a
 Description: Add additional pages in menubar.
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=153
 Author: P@t
@@ -124,7 +124,7 @@ ORDER BY pos ASC
     while ($row = pwg_db_fetch_assoc($result))
     {
       $url = make_index_url(array('section'=>'page')).'/'.(isset($row['permalink']) ? $row['permalink'] : $row['id']);
-      array_push($data, array('URL' => $url, 'LABEL' => trigger_event('AP_render_title', $row['title'])));
+      array_push($data, array('URL' => $url, 'LABEL' => trigger_change('AP_render_title', $row['title'])));
     }
 
     if (!empty($data))

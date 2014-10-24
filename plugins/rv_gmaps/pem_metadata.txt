@@ -1,4 +1,4 @@
 File automatically created from SVN repository.
 
 URL: http://piwigo.org/svn/extensions/rv_gmaps/trunk 
-Revision: 26838
+Revision: 29391

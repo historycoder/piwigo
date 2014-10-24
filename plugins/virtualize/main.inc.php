@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Virtualize
-Version: 2.6.a
+Version: 2.7.a
 Description: Make categories virtual and move photos from "galleries" to "upload"
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=511
 Author: plg

@@ -85,7 +85,7 @@ foreach( $categories as $category)
     'related_categories', array(
       'U_MAP' => rvm_make_map_index_url( array( 'category' => $category ) ),
       'URL' => make_index_url( array( 'category' => $category ) ),
-      'NAME' => trigger_event('render_element_description', $category['name']),
+      'NAME' => trigger_change('render_element_description', $category['name']),
       'TITLE' => l10n_dec( '%d photo', '%d photos', $category['counter'] ),
       'CLASS' => 'tagLevel'.$category['level']
     )
@@ -190,7 +190,7 @@ foreach ($pictures as $img)
     ) );
 }
 $template->assign( array(
-  'derivative_params' => trigger_event('get_index_derivative_params', ImageStdParams::get_by_type( pwg_get_session_var('index_deriv', IMG_THUMB) ) ),
+  'derivative_params' => trigger_change('get_index_derivative_params', ImageStdParams::get_by_type( pwg_get_session_var('index_deriv', IMG_THUMB) ) ),
   'SHOW_THUMBNAIL_CAPTION' => false,
 	'thumbnails' => $tpl_thumbnails_var,
     ) );

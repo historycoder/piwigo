@@ -1,16 +1,5 @@
 <?php
 
-function rvm_get_cache_file_name()
-{
-	global $conf;
-	return PHPWG_ROOT_PATH.$conf['data_location'].'/tmp/_rvgm_cat_cache.dat';
-}
-
-function rvm_invalidate_cache()
-{
-	@unlink(  rvm_get_cache_file_name() );
-}
-
 function rvm_load_language($source=false)
 {
 	global $lang,$lang_info,$conf,$template;

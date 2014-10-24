@@ -3,8 +3,6 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
 include_once( dirname(dirname(__FILE__)) .'/include/functions.php');
 
-add_event_handler('invalidate_user_cache', 'rvm_invalidate_cache' );
-
 add_event_handler('get_admin_plugin_menu_links', 'rvm_plugin_admin_menu' );
 function rvm_plugin_admin_menu($menu)
 {
@@ -88,7 +86,6 @@ function rvm_element_set_global_action($action, $collection)
 UPDATE '.IMAGES_TABLE.' SET '.$update_query.'
   WHERE id IN ('.implode(',',$collection).')';
     pwg_query($update_query);
-    rvm_invalidate_cache();
   }
 }
 

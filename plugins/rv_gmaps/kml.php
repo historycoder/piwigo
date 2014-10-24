@@ -123,7 +123,7 @@ SELECT id, path, representative_ext
 
 		$tpl_var = array(
 				'NAME'    => $category['name'],
-				'COMMENT' => trigger_event('render_category_literal_description', trigger_event('render_category_description', @$category['comment']) ),
+				'COMMENT' => trigger_change('render_category_literal_description', trigger_change('render_category_description', @$category['comment']) ),
 				'U_CATEGORY' => make_index_url( array('category'=>$category) ),
 				'U_KML'   => rvm_make_kml_index_url( array('section'=>'categories', 'category'=>$category) ),
 				'U_MAP'   => rvm_make_map_index_url( array('section'=>'categories', 'category'=>$category) ),

@@ -283,20 +283,9 @@ function bounds_lon_range($b)
 
 function rvm_get_cat_bounds()
 {
-  $cache_file_name = rvm_get_cache_file_name();
-  if ( file_exists($cache_file_name) )
-  {
-    return unserialize( file_get_contents($cache_file_name) );
-  }
-  $forbidden = get_sql_condition_FandF(
-        array
-          (
-            'forbidden_categories' => 'category_id',
-            'visible_categories' => 'category_id',
-            'visible_images' => 'i.id'
-          ),
-        'AND'
-    );
+	global $persistent_cache;
+	if ($persistent_cache->get('rvgm_album_bounds', $cat_bounds))
+		return $cat_bounds;
 
   $query = '
 SELECT category_id cat_id, uppercats, MAX(latitude) AS n, MIN(latitude) AS s, MAX(longitude) AS e, MIN(longitude) AS w, COUNT(i.id) count, MIN(i.date_creation) min_date, MAX(i.date_creation) max_date
@@ -306,9 +295,8 @@ SELECT category_id cat_id, uppercats, MAX(latitude) AS n, MIN(latitude) AS s, MA
     '.IMAGE_CATEGORY_TABLE.' ON category_id = c.id
       INNER JOIN
     '.IMAGES_TABLE.' i ON image_id=i.id
-  WHERE lat IS NOT NULL '.$forbidden.'
-  GROUP BY category_id
-;';
+  WHERE latitude IS NOT NULL
+  GROUP BY category_id';
 
   $result = pwg_query($query);
   $uppercats_list = array();
@@ -348,11 +336,8 @@ SELECT category_id cat_id, uppercats, MAX(latitude) AS n, MIN(latitude) AS s, MA
     }
   }
   //echo "<pre>" . var_export($cat_bounds,true);
-	mkgetdir( dirname($cache_file_name) );
-  $file = fopen($cache_file_name , 'w' );
-  fwrite($file, serialize($cat_bounds) );
-  fclose( $file );
 
+	$persistent_cache->set('rvgm_album_bounds', $cat_bounds);
   return $cat_bounds;
 }
 
@@ -374,8 +359,7 @@ function rvm_build_section_items($img_fields, $where_sql, $mode, $order_by=null)
       array
         (
           'forbidden_categories' => 'category_id',
-          'visible_categories' => 'category_id',
-          'visible_images' => 'i.id'
+          'forbidden_images' => 'i.id'
         ),
       "\n  AND"
   );
@@ -454,7 +438,7 @@ SELECT '.$img_fields.'
     }
     if ( isset($page['category']) )
     {
-      $page['title'] = trigger_event('render_category_name', $page['category']['name']);
+      $page['title'] = trigger_change('render_category_name', $page['category']['name']);
       $page['comment'] = $page['category']['comment'];
     }
     else
@@ -529,7 +513,7 @@ SELECT '.$img_fields.'
     $page['items'] = $func($query);
     $page['title'] = l10n('Recent photos');
   }
-  else if ('list'==$page['section'])
+  elseif ('list'==$page['section'])
   {
     $query ='
 SELECT '.$img_fields.'

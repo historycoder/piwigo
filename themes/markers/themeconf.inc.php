@@ -1,14 +1,14 @@
 <?php
 /*
 Theme Name: markers
-Version: 2.6.0
-Description: Modified dark.
+Version: 2.7.0
+Description: Dark background, grayscale.
 Theme URI: http://piwigo.org/ext/extension_view.php?eid=369
-Author: Phil Sager
+Author: Piwigo team
 Author URI: http://piwigo.org
 */
 $themeconf = array(
-  'name'  => 'markers',
-  'parent' => 'default'
+  'name'  => 'dark',
+  'parent' => 'default',
 );
 ?>

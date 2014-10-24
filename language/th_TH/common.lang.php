@@ -22,7 +22,7 @@
 // +-----------------------------------------------------------------------+
 /*
 Language Name: ภาษาไทย [TH]
-Version: 2.6.0
+Version: 2.7.0
 Language URI: http://piwigo.org/ext/extension_view.php?eid=519
 Author: Piwigo team
 Author URI: http://piwigo.org
@@ -32,6 +32,7 @@ $lang_info['language_name'] = "ภาษาไทย";
 $lang_info['country'] = "ประเทศไทย";
 $lang_info['direction'] = "ltr";
 $lang_info['code'] = "th";
+$lang_info['plupload_code'] = "th_TH";
 $lang_info['zero_plural'] = "1";
 
 

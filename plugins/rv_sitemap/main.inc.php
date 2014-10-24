@@ -1,6 +1,6 @@
 <?php /*
 Plugin Name: RV sitemap
-Version: 2.6.a
+Version: 2.7.a
 Description: Creates a sitemap for your gallery. Sitemaps are used to inform search engines about pages that are available for crawling.
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=78
 Author: rvelices
