@@ -301,7 +301,7 @@ $conf['smtp_secure'] = null;
 // +-----------------------------------------------------------------------+
 
 // show_iptc: Show IPTC metadata on picture.php if asked by user
-$conf['show_iptc'] = false;
+$conf['show_iptc'] = true;
 
 // show_iptc_mapping : is used for showing IPTC metadata on picture.php
 // page. For each key of the array, you need to have the same key in the
@@ -313,25 +313,42 @@ $conf['show_iptc'] = false;
 // To know how to associated iptc_field with their meaning, use
 // tools/metadata.php
 $conf['show_iptc_mapping'] = array(
-  'iptc_keywords'        => '2#025',
-  'iptc_caption_writer'  => '2#122',
-  'iptc_byline_title'    => '2#085',
-  'iptc_caption'         => '2#120'
+  'iptc_Keywords'				=> '2#025',
+  'iptc_Headline'				=> '2#105',
+  'iptc_ObjectName'				=> '2#005',
+  'iptc_LocalCaption'			=> '2#121',
+  'iptc_SpecialInstructions'	=> '2#040',
+  'iptc_City'					=> '2#090',
+  'iptc_DocumentNotes'			=> '2#230',
+  'iptc_Sub-location'			=> '2#092',
+  'iptc_UniqueDocumentID'		=> '2#187',
+  'iptc_DateCreated'			=> '2#055',
+  'iptc_DocumentHistory'		=> '2#231',
+  'iptc_Province-State'			=> '2#095',
+  'iptc_Caption-Abstract'		=> '2#120'
   );
 
 // use_iptc: Use IPTC data during database synchronization with files
 // metadata
-$conf['use_iptc'] = false;
+$conf['use_iptc'] = true;
 
 // use_iptc_mapping : in which IPTC fields will Piwigo find image
 // information ? This setting is used during metadata synchronisation. It
 // associates a piwigo_images column name to a IPTC key
 $conf['use_iptc_mapping'] = array(
-  'keywords'        => '2#025',
-  'date_creation'   => '2#055',
-  'author'          => '2#122',
-  'name'            => '2#005',
-  'comment'         => '2#120'
+  'keywords'			=> '2#025',
+  'date_creation'		=> '2#055',
+  'picturetitle'		=> '2#005',
+  'markertitle'			=> '2#105',
+  'markerdescription'	=> '2#120',
+  'picturecaption'		=> '2#121',
+  'address'				=> '2#040',
+  'city'				=> '2#090',
+  'notes'				=> '2#230',
+  'markernumber'		=> '2#092',
+  'markerid'			=> '2#187',
+  'sponsors'			=> '2#231',
+  'zip'					=> '2#095'
   );
 
 // show_exif: Show EXIF metadata on picture.php (table or line presentation
