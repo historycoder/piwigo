@@ -1,0 +1,4 @@
+#Ignore these
+/_data/*
+*.bak
+/galleries/*
