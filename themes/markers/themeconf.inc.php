@@ -8,7 +8,7 @@ Author: Piwigo team
 Author URI: http://piwigo.org
 */
 $themeconf = array(
-  'name'  => 'dark',
+  'name'  => 'p0w0',
   'parent' => 'default',
 );
 ?>
