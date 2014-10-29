@@ -15,13 +15,21 @@
  */
 
 /******************************************************************************/
+/*OHC font style import*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
 /* Texts Only */
 BODY, H1, H3, DT, H2 { color: #369; }
 H2, #menubar DT, TD H3 {
   color: #fff;
+  font-family: 'Roboto', sans-serif;
 }
 #theHeader{
- background-color: #fff;
+background-color: #fff;
+}
+#theHeader H1 {
+ font-family: 'Bree Serif', serif;
 }
 #menubar DT, #menubar DT A {
   color: #fff;
