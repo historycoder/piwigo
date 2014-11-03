@@ -1,3 +1,9 @@
+<dt style="background-color:#00527A; border-style:ridge; background-image:none;"><a href="http://www.ohiohistory.org/support-ohs/support-ohs">
+	Donate</a>
+</dt>
+<dd>
+	<p>There are many ways to <a href="http://www.ohiohistory.org/support-ohs/support-ohs"><em>support</em></a> Ohio History Connection.</p>
+</dd>
 <dt>
 	{if isset($U_START_FILTER)}
 	<a href="{$U_START_FILTER}" class="pwg-state-default pwg-button menubarFilter" title="{'display only recently posted photos'|@translate}" rel="nofollow"><span class="pwg-icon pwg-icon-filter"> </span></a>
